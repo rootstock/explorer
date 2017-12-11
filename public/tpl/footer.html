@@ -47,8 +47,9 @@
 <!-- END PRE-FOOTER -->
 <!-- BEGIN POST-FOOTER -->
 <div class="page-footer">
-    <div class="container"> Copyright &copy; 2016 RSK Labs. </div>
+    <div class="container" id="copyright">  </div>
 </div>
+<script> document.getElementById("copyright").innerHTML = "Copyright &copy; " + new Date().getFullYear() + " RSK Labs."; </script>
 <div class="scroll-to-top">
     <i class="icon-arrow-up"></i>
 </div>
