@@ -55,5 +55,5 @@ mongoose.model('Contract', Contract);
 module.exports.Block = mongoose.model('Block');
 module.exports.Contract = mongoose.model('Contract');
 
-mongoose.connect( 'mongodb://localhost/blockDB' );
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blockDB');
 mongoose.set('debug', true);
