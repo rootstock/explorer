@@ -11,7 +11,7 @@ var BlockStat = require('../db-stats.js').BlockStat;
 var updateStats = function(config) {
     var web3 = new Web3(new Web3.providers.HttpProvider('http://' + config.gethHost.toString() + ':' + config.gethPort.toString()));
 
-    mongoose.connect( 'mongodb://localhost/blockDB' );
+    mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blockDB');
     mongoose.set('debug', true);
 
     var latestBlock = web3.eth.blockNumber;
